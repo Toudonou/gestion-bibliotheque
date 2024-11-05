@@ -1,32 +1,41 @@
-# DRAFT
+# Rapport 1 - Méthodes Agiles
 
-## Application de gestion d'une bibliothèque
+## Membres du groupe
+- COCOSSOU Ulrich (Developer)
+- MEDENOU Dona (Developer)
+- NOUNAGNON Toudonou (Developer)
+- SARR Cheikh (Developur)
+- TCHUEM Kévin (Product Owner)
+- TOSSOU Fred (Scrum Master)
 
-## Fonctionnalités
+## Brève présentation du produit
+Nous créons une application de gestion d'une bibliothèque. Des utilisateurs (externes) pourront emprunter des livres à travers l'application. Et l'administrateur pourra gérer les emprunts, les retards et autres.
 
-- Un utilisateur peut s'inscrire (création de compte).
-- Un utilisateur peut se connecter à son compte (accès à un compte).
-- Un utilisateur peut rechercher un livre avec filtres.
-
-- L'administrateur peut se connecter à son compte (accès à un compte).
-- L'administrateur peut ajouter des livres.
-- L'administrateur peut consulter la liste des livres disponibles et leurs états.
-- L'administrateur peut modifier des informations sur des livres.
-- L'administrateur peut consulter la liste des 
-- L'application envoie aux utilisateurs des alertes.
-
-### Backend
-
-### Frontend
-
-### Product Backlog
+## Product Backlog
 
 | Elements du backlog                                                                                               | Estimation |
 |:------------------------------------------------------------------------------------------------------------------|:----------:|
 | Mettre en place l'environnement de développement pour notre Backend.                                              |     2      |
-| Mettre en place l'environnement de développement pour notre Frontend.                                             |     2      |
 | Modéliser notre base de données.                                                                                  |     3      |
+| Mettre en place notre base de données.                                                                            |     2      |
 | Enrichir notre base de données.                                                                                   |     2      |
+| Mettre en place l'environnement de développement pour notre Frontend.                                             |     2      |
 | En tant qu'administrateur, je peux me connecter à mon compte.                                                     |     1      |
 | En tant qu'administrateur, je peux me connecter à mon compte pour consulter la liste des exemplaires disponibles. |     2      |
 | En tant qu'administrateur, je peux me connecter à mon compte pour consulter la liste des exemplaires empruntés.   |     2      |
+
+## Sprint Backlog
+- Mettre en place l'environnement de développement pour notre Backend
+- Modéliser notre base de données.
+
+## Critères d'acceptance
+
+### Mise en place de l'environnement de développement Backend
+
+### Modélisation de la base de données
+Avoir un rapport PDF du modèle entité-relation de la base de données, comportant :
+- Le nom des entités
+- Le nom des relations
+- Les liens entre les relation et entité
+- Les cardinalités entre les relation et entité
+- Les champs de chaque entité et relation
