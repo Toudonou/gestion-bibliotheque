@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/livre")
-@CrossOrigin(origins = "*")
+@CrossOrigin()
 public class LivreController {
     private final LivreRepository livreRepository;
 
@@ -22,5 +22,10 @@ public class LivreController {
     @GetMapping
     public List<Livre> getAllLivres(){
         return livreRepository.findAll();
+    }
+
+    @GetMapping("/orderedByAuteur")
+    public List<Livre> getLivresOrderedByAuteur(){
+        return livreRepository.findAllByOrderByAuteurAsc();
     }
 }
