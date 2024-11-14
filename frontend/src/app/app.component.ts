@@ -15,6 +15,7 @@ export class AppComponent {
   ngOnInit(): void {
     this._livreService.getAllLivres().subscribe({
       next: (data: Livre[]) => {
+        console.log(data);
         this.livres = data;
       },
       error: (error) => {

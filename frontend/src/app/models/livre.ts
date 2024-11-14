@@ -3,7 +3,7 @@ export interface Livre {
     isbn: string;
     titre: string;
     auteur: string;
-    date_publication: Date;
+    date: Date;
     nombre_exemplaires: number;
 
   }
