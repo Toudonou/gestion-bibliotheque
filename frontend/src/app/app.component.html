@@ -1,0 +1,13 @@
+<div *ngIf="livres.length > 0; else noLivres">
+  <ul>
+    <li *ngFor="let livre of livres">
+      <h3>{{ livre.titre }}</h3>
+      <p>Auteur : {{ livre.auteur }}</p>
+      <p>ISBN : {{ livre.isbn }}</p>
+      <p>Date de publication : {{ livre.date_publication | date }}</p>
+    </li>
+  </ul>
+</div>
+<ng-template #noLivres>
+  <p>Aucun livre disponible pour le moment.</p>
+</ng-template>
