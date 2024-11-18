@@ -29,9 +29,7 @@ export class BiblioTableComponent implements OnInit {
 
   redirect(id: number, titre: string): void {
     console.log("Redirect to", id);
-    this.router.navigate(['/livre', id],{
-      queryParams: { secret: btoa(titre) }, // Encode le titre avec `btoa`
-    });
+    this.router.navigate(['/livre', id, titre]);
 
   }
 
