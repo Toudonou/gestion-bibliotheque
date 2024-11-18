@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/emprunts")
+@CrossOrigin()
 public class EmprunteController {
     private final EmprunteRepository emprunteRepository;
 
