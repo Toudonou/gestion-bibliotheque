@@ -5,6 +5,9 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.cglib.core.Local;
+
+import java.time.LocalDate;
 
 @Entity
 @Data
@@ -13,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "emprunte")
 public class Emprunte {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    //@GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_emprunt")
     private Integer id;
 
@@ -24,11 +27,11 @@ public class Emprunte {
     private Integer id_personne;
 
     @Column(name = "date_emprunt")
-    private Integer dateEmprunt;
+    private LocalDate dateEmprunt;
 
     @Column(name = "date_retour_estimee")
-    private Integer dateRetourEstimee;
+    private LocalDate dateRetourEstimee;
 
     @Column(name = "date_retour")
-    private Integer dateRetour;
+    private LocalDate dateRetour;
 }

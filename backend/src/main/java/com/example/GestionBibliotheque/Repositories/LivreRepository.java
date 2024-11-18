@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface LivreRepository extends JpaRepository<Livre, Integer> {
+public interface LivreRepository extends JpaRepository<Livre, String> {
     List<Livre> findAllByOrderByAuteurAsc();
 }

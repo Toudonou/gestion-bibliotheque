@@ -31,4 +31,14 @@ public class EmprunteController {
     public List<Emprunte> getAllEmprunts() {
         return emprunteRepository.findAll();
     }
+
+    @PostMapping("/emprunter/{id_livre}")
+    public void emprunterLivre(@PathVariable("id_livre") String id_livre){
+        emprunteService.emprunterLivre(id_livre);
+    }
+
+    @GetMapping("/emprunterGet/{id_livre}")
+    public void emprunterLivreGet(@PathVariable("id_livre") String id_livre){
+        emprunteService.emprunterLivre(id_livre);
+    }
 }
