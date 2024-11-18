@@ -7,7 +7,7 @@ import { Livre } from './models/livre';
   providedIn: 'root'
 })
 export class LivreService {
-  private url = "http://localhost:8080/livre";
+  private url = "http://localhost:8080/livre/orderedByAuteur";
   constructor(private http: HttpClient) { }
 
   getAllLivres(): Observable<Livre[]>{
