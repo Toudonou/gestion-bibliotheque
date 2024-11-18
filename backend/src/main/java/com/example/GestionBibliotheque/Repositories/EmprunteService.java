@@ -54,10 +54,14 @@ public class EmprunteService {
 
         // vérifier si le livre est disponible
         Livre livre = livreRepository.findById(id_livre).orElse(null);
-        if(livre == null || livre.getNombreExamplairesRestants() == 0){
+        if(livre == null){
+            return;
+        }
+        long nombreExamplairesRestants = livre.getNombreExamplairesRestants();
+        if(nombreExamplairesRestants == 0){
             return;
         } else {
-            livre.setNombreExamplairesRestants(livre.getNombreExamplairesRestants() - 1);
+            //livre.setNombreExamplairesRestants(nombreExamplairesRestants - 1);
             livreRepository.save(livre);
         }
 
