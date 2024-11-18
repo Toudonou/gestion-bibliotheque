@@ -16,15 +16,18 @@ public class Emprunte {
     @Column(name = "id_emprunt")
     private Integer id;
 
-    @Column(name = "book_id")
-    private String bookId;
+    @Column(name = "id_livre")
+    private String id_livre;
 
-    @Column(name = "genre_id")
-    private Integer genreId;
+    @Column(name = "id_personne")
+    private Integer id_personne;
 
     @Column(name = "date_emprunt")
     private Integer dateEmprunt;
 
     @Column(name = "date_retour_estimee")
     private Integer dateRetourEstimee;
+
+    @Column(name = "date_retour")
+    private Integer dateRetour;
 }
