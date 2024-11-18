@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LivreComponent } from './livre/livre.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BiblioTableComponent } from './biblio-table/biblio-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LivreComponent
+    LivreComponent,
+    BiblioTableComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,9 @@
 export interface Livre {
-    id_livre: number;
+    id: number;
     isbn: string;
     titre: string;
     auteur: string;
     date: Date;
-    nombre_exemplaires: number;
-
+    nombreExamplaires: string |any;
+    nombreExamplairesRestants: string | any;
   }
-  

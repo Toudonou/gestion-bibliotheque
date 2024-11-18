@@ -1,22 +1,4 @@
-<div class="table-responsive">
-  <table class="table table-bordered table-hover table-striped">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">ISBN</th>
-        <th scope="col">Titre</th>
-        <th scope="col">Auteur</th>
-        <th scope="col">Date de Publication</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let livre of livres; let i = index">
-        <th scope="row">{{ i + 1 }}</th>
-        <td>{{ livre.isbn }}</td>
-        <td>{{ livre.titre }}</td>
-        <td>{{ livre.auteur }}</td>
-        <td>{{ livre.date }}</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="container">
+<app-biblio-table></app-biblio-table>
+
 </div>
