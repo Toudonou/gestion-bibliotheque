@@ -23,8 +23,8 @@ export class LivreComponent implements OnInit {
   ngOnInit(): void {
     // Récupérer l'ID depuis les paramètres de la route
     this.personneId = Number(this.route.snapshot.paramMap.get('id'));
-    const encodedTitre = this.route.snapshot.queryParamMap.get('secret');
-    this.livreTitre = encodedTitre ? atob(encodedTitre) : null; // Decode avec `atob`
+    this.livreTitre = this.route.snapshot.paramMap.get('titre');
+
 
     if (this.personneId) {
       // Appeler le service pour récupérer les données de la personne

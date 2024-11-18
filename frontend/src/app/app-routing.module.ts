@@ -5,7 +5,7 @@ import { BiblioTableComponent } from './biblio-table/biblio-table.component';
 
 const routes: Routes = [
   { path: '', component: BiblioTableComponent }, // Table des livres
-  { path: "livre/:id", component: LivreComponent}
+  { path: "livre/:id/:titre", component: LivreComponent}
 ];
 
 @NgModule({
