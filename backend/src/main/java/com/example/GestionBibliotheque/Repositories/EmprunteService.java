@@ -45,6 +45,7 @@ public class EmprunteService {
             map.put("id_livre", emprunt.getId_livre());
             map.put("date_emprunt", emprunt.getDateEmprunt());
             map.put("date_retour", emprunt.getDateRetour());
+            map.put("date_retour_prevue", emprunt.getDateRetourEstimee());
             result.add(map);
         }
         return result;
