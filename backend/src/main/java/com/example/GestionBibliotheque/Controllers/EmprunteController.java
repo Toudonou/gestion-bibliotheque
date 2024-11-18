@@ -6,6 +6,7 @@ import com.example.GestionBibliotheque.Repositories.EmprunteRepository;
 import com.example.GestionBibliotheque.Repositories.EmprunteService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,7 +23,7 @@ public class EmprunteController {
     }
 
     @GetMapping("/{id_livre}")
-    public List<Map<String, Object>> getEmpruntByIdLivre(@PathVariable("id_livre") String id_livre) {
+    public List<HashMap<String, Object>> getEmpruntByIdLivre(@PathVariable("id_livre") String id_livre) {
         return emprunteService.getEmpruntByIdLivre(id_livre);
     }
 

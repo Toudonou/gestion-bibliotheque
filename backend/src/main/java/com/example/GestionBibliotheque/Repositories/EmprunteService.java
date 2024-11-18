@@ -5,6 +5,7 @@ import com.example.GestionBibliotheque.Models.Personne;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,7 +20,7 @@ public class EmprunteService {
         this.personneRepository = personneRepository;
     }
 
-    public List<Map<String, Object>> getEmpruntByIdLivre(String id_livre) {
+    public List<HashMap<String, Object>> getEmpruntByIdLivre(String id_livre) {
         // récupérer les emprunts
         List<Emprunte> emprunts = emprunteRepository.findAllById_livre(id_livre);
         // récupérer les personnes
@@ -28,19 +29,18 @@ public class EmprunteService {
             personnes.addAll(personneRepository.findAllById(emprunt.getId_personne()));
         }
 
-        List<Map<String, Object>> result = new ArrayList<>();
+        List<HashMap<String, Object>> result = new ArrayList<>();
         for (int i = 0; i < emprunts.size(); i++) {
             Emprunte emprunt = emprunts.get(i);
             Personne personne = personnes.get(i);
-            Map<String, Object> map = Map.of(
-                "id_emprunt", emprunt.getId(),
-                "id_personne", personne.getId(),
-                "nom_personne", personne.getNom(),
-                "prenom_personne", personne.getPrenom(),
-                "id_livre", emprunt.getId_livre(),
-                "date_emprunt", emprunt.getDateEmprunt(),
-                "date_retour", emprunt.getDateRetour()
-            );
+            HashMap<String, Object> map = new HashMap<>();
+            map.put("id_emprunt", emprunt.getId());
+            map.put("id_personne", personne.getId());
+            map.put("nom", personne.getNom());
+            map.put("prenom", personne.getPrenom());
+            map.put("id_livre", emprunt.getId_livre());
+            map.put("date_emprunt", emprunt.getDateEmprunt());
+            map.put("date_retour", emprunt.getDateRetour());
             result.add(map);
         }
         return result;
