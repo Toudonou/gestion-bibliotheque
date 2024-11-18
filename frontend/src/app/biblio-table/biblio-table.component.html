@@ -15,7 +15,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let livre of livres; let i = index" (click) = "redirect(livre.id)">
+      <tr *ngFor="let livre of livres; let i = index" (click) = "redirect(livre.id, livre.titre)">
         <th scope="row">{{ i + 1 }}</th>
         <td>{{ livre.isbn || 'Non disponible' }}</td>
         <td>{{ livre.auteur || 'Non disponible' }}</td>

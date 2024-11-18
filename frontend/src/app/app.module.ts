@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { LivreComponent } from './livre/livre.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BiblioTableComponent } from './biblio-table/biblio-table.component';
+import { LivreInfoComponent } from './livre-info/livre-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LivreComponent,
-    BiblioTableComponent
+    BiblioTableComponent,
+    LivreInfoComponent
   ],
   imports: [
     BrowserModule,

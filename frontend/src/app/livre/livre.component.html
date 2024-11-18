@@ -1,1 +1,25 @@
-<p>livre works!</p>
+<div class="head d-flex">
+
+</div>
+<div class="mb-3"> Emprunts du livre 
+<span class="fw-bold">{{livreTitre}}</span>    
+</div>
+<div class="table-responsive">
+  <table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let personne of personnes; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ personne.nom }}  {{personne.prenom}}</td>
+        <td>{{ personne.mail}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Livre } from '../models/livre';
 import { LivreService } from '../livre.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-biblio-table',
@@ -11,7 +12,7 @@ export class BiblioTableComponent implements OnInit {
 
   livres: Livre[] = [];
 
-  constructor(private _livreService: LivreService){}
+  constructor(private _livreService: LivreService, private router: Router){}
 
   ngOnInit(): void {
     this._livreService.getAllLivres().subscribe({
@@ -26,8 +27,12 @@ export class BiblioTableComponent implements OnInit {
     });
   }
 
-  redirect(id: number): void {
+  redirect(id: number, titre: string): void {
     console.log("Redirect to", id);
+    this.router.navigate(['/livre', id],{
+      queryParams: { secret: btoa(titre) }, // Encode le titre avec `btoa`
+    });
+
   }
 
 }
