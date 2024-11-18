@@ -1,6 +1,9 @@
 export interface Personne {
-    id: number;
-    nom: string;
-    prenom: string;
-    mail: string;
+    id_livre: number;
+    id_personne: number;
+    id_emprunt: number;
+    prenom_personne: string;
+    nom_personne: string;
+    date_emprunt: Date;
+    date_retour: Date;
   }

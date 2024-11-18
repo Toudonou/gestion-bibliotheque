@@ -10,14 +10,16 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Nom</th>
-        <th scope="col">Email</th>
+        <th scope="col">Date emprunt</th>
+        <th scope="col">Date retour</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let personne of personnes; let i = index">
         <th scope="row">{{ i + 1 }}</th>
-        <td>{{ personne.nom }}  {{personne.prenom}}</td>
-        <td>{{ personne.mail}}</td>
+        <td>{{ personne.nom_personne }}  {{personne.prenom_personne}}</td>
+        <td>{{personne.date_emprunt | date}}</td>
+        <td>{{personne.date_retour | date}}</td>
       </tr>
     </tbody>
   </table>
