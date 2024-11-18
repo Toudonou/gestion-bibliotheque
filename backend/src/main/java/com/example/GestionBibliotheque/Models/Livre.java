@@ -12,7 +12,7 @@ public class Livre {
     @Id
     @Column(name = "id_livre")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private String id;
 
     @Column(name = "ISBN")
     private String isbn;
