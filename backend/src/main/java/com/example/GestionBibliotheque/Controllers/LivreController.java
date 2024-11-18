@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/livre")
+@RequestMapping("/livres")
 @CrossOrigin()
 public class LivreController {
     private final LivreRepository livreRepository;

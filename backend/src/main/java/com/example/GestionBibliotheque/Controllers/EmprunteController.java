@@ -18,8 +18,8 @@ public class EmprunteController {
     }
 
     @GetMapping("/{id_livre}")
-    public List<Personne> getPersonnesWhoEmpruntedBooks(@PathVariable("id_livre") Integer id_livre) {
-        return emprunteRepository.findAllPersonnesWhoEmpruntedBooks(id_livre);
+    public List<Emprunte> getEmpruntByIdLivre(@PathVariable("id_livre") String id_livre) {
+        return emprunteRepository.findAllById_livre(id_livre);
     }
 
     @GetMapping
