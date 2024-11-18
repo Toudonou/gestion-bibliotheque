@@ -36,8 +36,8 @@ public class EmprunteService {
             HashMap<String, Object> map = new HashMap<>();
             map.put("id_emprunt", emprunt.getId());
             map.put("id_personne", personne.getId());
-            map.put("nom", personne.getNom());
-            map.put("prenom", personne.getPrenom());
+            map.put("nom_personne", personne.getNom());
+            map.put("prenom_personne", personne.getPrenom());
             map.put("id_livre", emprunt.getId_livre());
             map.put("date_emprunt", emprunt.getDateEmprunt());
             map.put("date_retour", emprunt.getDateRetour());
