@@ -14,6 +14,7 @@ export class LivreComponent implements OnInit {
   personnes: Personne[] = []; // Tableau pour stocker les données reçues
   personneId: number | null = null; // Stocke l'ID de la personne
   livreTitre: string | null = null; // Stocke le titre du livre
+  hoveredRow: number | null = null; //
 
   constructor(
     private route: ActivatedRoute,

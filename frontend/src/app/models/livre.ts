@@ -4,6 +4,6 @@ export interface Livre {
     titre: string;
     auteur: string;
     date: Date;
-    nombreExamplaires: string |any;
-    nombreExamplairesRestants: string | any;
+    nombreExamplaires: number |any;
+    nombreExamplairesRestants: number | any;
   }

@@ -6,4 +6,5 @@ export interface Personne {
     nom_personne: string;
     date_emprunt: Date;
     date_retour: Date;
+    date_retour_prevue: Date;
   }

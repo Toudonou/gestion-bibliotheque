@@ -12,14 +12,20 @@
         <th scope="col">Nom</th>
         <th scope="col">Date emprunt</th>
         <th scope="col">Date retour</th>
+        <th scope="col">Date de retour estimée</th>
+        <!-- <th scope="col">Nombre de relances</th> -->
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let personne of personnes; let i = index">
+      <tr *ngFor="let personne of personnes; let i = index"   
+      >        
+      <!-- [ngClass]="{ 'table-danger': personne.id_personne > 3 }" -->
         <th scope="row">{{ i + 1 }}</th>
         <td>{{ personne.nom_personne }}  {{personne.prenom_personne}}</td>
         <td>{{personne.date_emprunt | date}}</td>
         <td>{{personne.date_retour | date}}</td>
+        <td>{{personne.date_retour_prevue | date }}</td>
+        <!-- <td>3</td> -->
       </tr>
     </tbody>
   </table>
